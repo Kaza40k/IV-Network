@@ -111,9 +111,9 @@ void InitialData(RakNet::BitStream * pBitStream, RakNet::Packet * pPacket)
 	g_pCore->GetGraphics()->GetChat()->Clear();
 	g_pCore->GetGraphics()->GetChat()->Print(CString("#16C5F2Successfully connected to %s...", g_pCore->GetServerName().Get()));
 
-	// whitout this two line below playerRequestSpawn never called
-	EFLC::CScript::DoScreenFadeInUnhacked(0);
-	EFLC::CScript::DoScreenFadeOutUnhacked(0);
+	// whitout this two line below playerRequestSpawn never called..
+	EFLC::CScript::DoScreenFadeInUnhacked(-1);
+	EFLC::CScript::DoScreenFadeOutUnhacked(-1);
 }
 
 void GetPlayers(RakNet::BitStream * pBitStream, RakNet::Packet * pPacket)
