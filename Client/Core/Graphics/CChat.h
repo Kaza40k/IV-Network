@@ -49,6 +49,9 @@ public:
 				~CChat();
 
 	void		SetVisible(bool bVisible) { m_bVisible = bVisible; }
+	bool		IsVisible() { return m_bVisible; }
+
+	bool		IsInputVisible() { return m_bTypeing; }
 
 	void		Render();
 

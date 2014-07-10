@@ -85,6 +85,9 @@
     <Filter Include="Libraries\SQLite">
       <UniqueIdentifier>{1aaec118-aff2-4a1b-b3e4-7652306705c9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Libraries\md5">
+      <UniqueIdentifier>{50884e68-9870-45af-bb02-8fbf0ae28edb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -402,8 +405,14 @@
     <ClCompile Include="..\Shared\CLibrary.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Network\CMasterList.cpp">
+      <Filter>Source Files\Network</Filter>
+    </ClCompile>
     <ClCompile Include="..\Shared\Network\CHttpClient.cpp">
       <Filter>Source Files\Shared\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\md5\md5.cpp">
+      <Filter>Libraries\md5</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -631,6 +640,12 @@
     </ClInclude>
     <ClInclude Include="..\Shared\Network\CHttpClient.h">
       <Filter>Header Files\Shared\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\CMasterList.h">
+      <Filter>Header Files\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\md5\md5.h">
+      <Filter>Libraries\md5</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

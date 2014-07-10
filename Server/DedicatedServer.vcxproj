@@ -57,7 +57,7 @@
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalIncludeDirectories>./;$(SolutionDir)\Shared;$(SolutionDir)\Libraries;$(SolutionDir)\Libraries\Squirrel</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_MBCS;_CRT_SECURE_NO_WARNINGS;_SERVER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SYNC_TEST;_MBCS;_CRT_SECURE_NO_WARNINGS;_SERVER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BrowseInformation>false</BrowseInformation>
     </ClCompile>
@@ -145,6 +145,7 @@
     <ClCompile Include="..\Libraries\lua\lundump.c" />
     <ClCompile Include="..\Libraries\lua\lvm.c" />
     <ClCompile Include="..\Libraries\lua\lzio.c" />
+    <ClCompile Include="..\Libraries\md5\md5.cpp" />
     <ClCompile Include="..\Libraries\Sqlite\sqlite3.c" />
     <ClCompile Include="..\Libraries\Squirrel\sqapi.cpp" />
     <ClCompile Include="..\Libraries\Squirrel\sqbaselib.cpp" />
@@ -215,6 +216,7 @@
     <ClCompile Include="Entity\CPlayerEntity.cpp" />
     <ClCompile Include="Entity\CVehicleEntity.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Network\CMasterList.cpp" />
     <ClCompile Include="Network\CNetworkModule.cpp" />
     <ClCompile Include="Network\CNetworkRPC.cpp" />
     <ClCompile Include="Scripting\Natives\CScriptClasses.cpp" />
@@ -246,6 +248,7 @@
     <ClInclude Include="..\Libraries\lua\lundump.h" />
     <ClInclude Include="..\Libraries\lua\lvm.h" />
     <ClInclude Include="..\Libraries\lua\lzio.h" />
+    <ClInclude Include="..\Libraries\md5\md5.h" />
     <ClInclude Include="..\Shared\CLibrary.h" />
     <ClInclude Include="..\Shared\Network\CBitStream.h" />
     <ClInclude Include="..\Shared\Network\CHttpClient.h" />
@@ -290,6 +293,7 @@
     <ClInclude Include="Entity\CPlayerEntity.h" />
     <ClInclude Include="Entity\CVehicleEntity.h" />
     <ClInclude Include="Entity\Entities.h" />
+    <ClInclude Include="Network\CMasterList.h" />
     <ClInclude Include="Network\CNetworkModule.h" />
     <ClInclude Include="Network\CNetworkRPC.h" />
     <ClInclude Include="Scripting\Natives\CScriptClasses.h" />
