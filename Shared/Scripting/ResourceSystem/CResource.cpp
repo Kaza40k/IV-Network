@@ -262,10 +262,10 @@ bool CResource::Unload()
 	return false;
 }
 
-void CResource::Reload()
+bool CResource::Reload()
 {
 	Unload();
-	Load();
+	return Load();
 }
 
 bool CResource::CreateVM()

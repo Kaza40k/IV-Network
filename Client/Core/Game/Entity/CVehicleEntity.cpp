@@ -95,6 +95,8 @@ CVehicleEntity::CVehicleEntity(int iVehicleModel, CVector3 vecPos, float fAngle,
 	// Set the spawn position
 	memcpy(&m_vecSpawnPosition, &vecPos, sizeof(CVector3));
 
+	memcpy(&m_vecRotation, &CVector3(fAngle, 0.0f, 0.0f), sizeof(CVector3));
+
 }
 
 CVehicleEntity::~CVehicleEntity()
@@ -129,8 +131,8 @@ bool CVehicleEntity::Create()
 	if (pVehicle)
 	{
 		pVehicle->Function76(0);
-		//pVehicle->m_byteFlags1 |= 4u;
-		//pVehicle->m_dwFlags1 |= 8u; // set fixed wait for collision/
+		pVehicle->m_byteFlags1 |= 4u;
+		pVehicle->m_dwFlags1 |= 8u; // set fixed wait for collision/
 
 		CWorld__AddEntity(pVehicle, false);
 		CVehicleModelInfo__AddReference(m_pModelInfo->GetModelInfo());
@@ -163,15 +165,11 @@ bool CVehicleEntity::Create()
 		m_bSpawned = true;
 
 		// Reset the vehicle
-		//Reset();
+		Reset();
 
 		SetPosition(m_vecSpawnPosition);
 		SetRotation(m_vecRotation);
-		SetEngineState(GetEngineState());
-		m_pVehicle->SetHeadlights(GetLightsState());
-		if (GetSirenState()) SetSirenState(true);
-		if (GetTaxiLightsState()) SetTaxiLightsState(true);
-
+		
 		CLogFile::Printf("Created vehicle! (Id: %d, Handle: %X)", m_vehicleId, g_pCore->GetGame()->GetPools()->GetVehiclePool()->HandleOf(pVehicle));
 		return true;
 	}

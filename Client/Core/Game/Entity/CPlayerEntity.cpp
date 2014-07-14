@@ -769,8 +769,8 @@ void CPlayerEntity::SetModel(int iModelId)
 		m_pPlayerPed->SetPed(m_pPlayerInfo->GetPlayerPed());
 
 		//fix: no more random clothes
-		for (int i = 0; i < 11; ++i)
-			SetClothes(i, 0);
+		//for (int i = 0; i < 11; ++i)
+			//SetClothes(i, 0);
 	}
 }
 

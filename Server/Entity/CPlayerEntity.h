@@ -179,7 +179,6 @@ public:
 	float		GetArmour(void) { return GetEntity()->GetArmour(); }
 
 	void		SetColor(DWORD dwColor);
-
 	DWORD		GetColor(void) { return GetEntity()->GetColor(); }
 
 	void		SetHeading(float fHeading);

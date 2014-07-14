@@ -160,3 +160,22 @@ CResource* CResourceManager::Load(CString strAbsPath, CString strResourceName)
 
 	return 0;
 }
+
+void CResourceManager::Unload(CResource* pResource)
+{
+	CLogFile::Printf("Resource unloaded (%s)", pResource->GetName().Get());
+	RemoveResource(pResource);
+	pResource->Unload();	
+	delete pResource;	
+}
+
+CResource* CResourceManager::GetResource(CString strResourceName)
+{
+	for (auto pResource : m_resources)
+	{
+		if (pResource->GetName() == strResourceName)
+			return pResource;
+	}
+
+	return nullptr;
+}

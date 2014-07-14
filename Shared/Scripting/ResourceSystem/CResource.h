@@ -90,7 +90,7 @@ public:
 
 	bool		Load();
 	bool		Unload();
-	void		Reload();
+	bool		Reload();
 
 	bool		Start(std::list<CResource *> * dependents = NULL, bool bStartManually = false, bool bStartIncludedResources = true);
 	bool		Stop(bool bStopManually = false);

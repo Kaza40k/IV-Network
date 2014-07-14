@@ -773,7 +773,8 @@ void GetVehicles(RakNet::BitStream * pBitStream, RakNet::Packet * pPacket)
 			//	// Add our vehicle
 			g_pCore->GetGame()->GetVehicleManager()->Add(vehicleId, pVehicle);
 			pVehicle->SetId(vehicleId);
-			pVehicle->SetPosition(vecPosition);
+			pVehicle->Create();
+			pVehicle->SetPosition(vecPosition, false);
 			pVehicle->SetRotation(vecRotation);
 			pVehicle->SetHealth(fHealth);
 			pVehicle->SetEngineState(engine);
